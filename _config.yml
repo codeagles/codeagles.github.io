@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Codeagles
+title: Codeagles's Blog
 subtitle:
-description:
+description: 
 keywords:
-author: John Doe
-language:
+author: Codeagles
+language: zh-CN
 timezone:
 
 # URL
