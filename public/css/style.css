@@ -1361,67 +1361,57 @@ article .content .caption {
   content: ")";
 }
 .highlight {
-  background: #474949;
-  color: #d1d9e1;
+  background: #2b2b2b;
+  color: #bababa;
 }
-.highlight .code .comment,
-.highlight .code .quote {
-  color: #969896;
+.highlight .code .strong,
+.highlight .code .emphasis {
+  color: #a8a8a2;
+}
+.highlight .code .bullet,
+.highlight .code .quote,
+.highlight .code .link,
+.highlight .code .number,
+.highlight .code .regexp,
+.highlight .code .literal {
+  color: #6896ba;
+}
+.highlight .code .code,
+.highlight .code .selector-class {
+  color: #a6e22e;
+}
+.highlight .code .emphasis {
   font-style: italic;
 }
 .highlight .code .keyword,
 .highlight .code .selector-tag,
-.highlight .code .literal,
-.highlight .code .type,
-.highlight .code .addition {
-  color: #c9c;
+.highlight .code .section,
+.highlight .code .attribute,
+.highlight .code .name,
+.highlight .code .variable {
+  color: #cb7832;
 }
-.highlight .code .number,
-.highlight .code .selector-attr,
-.highlight .code .selector-pseudo {
-  color: #f99157;
+.highlight .code .params {
+  color: #b9b9b9;
 }
 .highlight .code .string,
-.highlight .code .doctag,
-.highlight .code .regexp {
-  color: #8abeb7;
-}
-.highlight .code .title,
-.highlight .code .name,
-.highlight .code .section,
-.highlight .code .built_in {
-  color: #b5bd68;
-}
-.highlight .code .variable,
-.highlight .code .template-variable,
-.highlight .code .selector-id,
-.highlight .code .class .title {
-  color: #fc6;
-}
-.highlight .code .section,
-.highlight .code .name,
-.highlight .code .strong {
-  font-weight: bold;
-}
-.highlight .code .symbol,
-.highlight .code .bullet,
 .highlight .code .subst,
-.highlight .code .meta,
-.highlight .code .link {
-  color: #f99157;
+.highlight .code .type,
+.highlight .code .built_in,
+.highlight .code .builtin-name,
+.highlight .code .symbol,
+.highlight .code .selector-id,
+.highlight .code .selector-attr,
+.highlight .code .selector-pseudo,
+.highlight .code .template-tag,
+.highlight .code .template-variable,
+.highlight .code .addition {
+  color: #e0c46c;
 }
-.highlight .code .deletion {
-  color: #dc322f;
-}
-.highlight .code .formula {
-  background: #eee8d5;
-}
-.highlight .code .attr,
-.highlight .code .attribute {
-  color: #81a2be;
-}
-.highlight .code .emphasis {
-  font-style: italic;
+.highlight .code .comment,
+.highlight .code .deletion,
+.highlight .code .meta {
+  color: #7f7f7f;
 }
 pre {
   overflow-x: auto;
