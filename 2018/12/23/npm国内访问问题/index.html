@@ -152,10 +152,10 @@
     <h1 id="使用npm安装失败-报错rollbackFailedOptional"><a href="#使用npm安装失败-报错rollbackFailedOptional" class="headerlink" title="使用npm安装失败 报错rollbackFailedOptional"></a>使用npm安装失败 报错rollbackFailedOptional</h1><p>亲自试过是可以用的，网上给了好多，在这说一下我筛选后的方法。</p>
 <ul>
 <li><p>1.通过config</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org </span><br><span class="line">npm info underscore</span><br></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="keyword">set</span> registry <span class="comment">https:</span>//<span class="comment">registry.npm.taobao.org</span> </span><br><span class="line">npm <span class="comment">info underscore</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>2.通过命令行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org info underscore</span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">npm</span> --registry https://registry.npm.taobao.org <span class="literal">info</span> underscore</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>设置好即可使用npm了。</p>
