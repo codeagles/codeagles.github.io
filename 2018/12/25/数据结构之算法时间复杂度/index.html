@@ -14,13 +14,12 @@
 <meta property="og:site_name" content="Codeagles&#39;s Blog">
 <meta property="og:description" content="版权声明：本文为 Codeagles 原创文章，可以随意转载，但必须在明确位置注明出处！！！  想要学会算法时间复杂度，那么就要先弄清楚几个概念。  什么是算法时间复杂度？ 它有什么用呢？ 写法记作 T(n)=O(f(n)) T(n):语句执行的总次数关于n的函数 n：问题规模 f(n):问题规模n的某个函数 用O()来体现算法时间复杂度的记法    时间复杂度的定义是：如果一个问题的规模是n，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3305482-09eefeadfe6248ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://img.codeagles.com/时间复杂度.png">
-<meta property="og:updated_time" content="2018-12-25T16:09:51.868Z">
+<meta property="og:updated_time" content="2018-12-25T16:11:04.894Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据结构之算法时间复杂度">
 <meta name="twitter:description" content="版权声明：本文为 Codeagles 原创文章，可以随意转载，但必须在明确位置注明出处！！！  想要学会算法时间复杂度，那么就要先弄清楚几个概念。  什么是算法时间复杂度？ 它有什么用呢？ 写法记作 T(n)=O(f(n)) T(n):语句执行的总次数关于n的函数 n：问题规模 f(n):问题规模n的某个函数 用O()来体现算法时间复杂度的记法    时间复杂度的定义是：如果一个问题的规模是n，">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3305482-09eefeadfe6248ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="http://img.codeagles.com/时间复杂度.png">
     
     
         
@@ -173,7 +172,7 @@
 <p>那么它有什么用呢？刚才也说了，可以通过f(n)的函数关系来评估算法的效率问题，说白了就是<strong>通过时间复杂度来看算法的好坏</strong>。</p>
 <p><em>值得注意的是：有的算法中基本操作执行次数不仅仅跟初始输入的数据规模(n)有关，还和数据本身有关。例如一些排序算法，同样n个待处理数据，数据初始有序性不同，基本操作执行次数也会不同。如果算法中有特殊要求，一般依照使得基本操作执行次数最多的输入来计算时间复杂度，即将最坏的情况最为算法时间复杂度的度量。</em></p>
 <p>##常见的是按复杂度的大小</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/3305482-09eefeadfe6248ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://img.codeagles.com/时间复杂度.png" alt="常见的时间复杂度"><br>有的人会对log2 n与log n做对比，不理解这里为什么不一样，其实这两个是一样的也就是图中第2个和第4个都是可以替换以2为底的对数形式。</p>
+<p><img src="http://img.codeagles.com/时间复杂度.png" alt="常见的时间复杂度"><br>有的人会对log2 n与log n做对比，不理解这里为什么不一样，其实这两个是一样的也就是图中第2个和第4个都是可以替换以2为底的对数形式。</p>
 <p><em>对数时间<br>主条目：对数时间<br>若算法的T(n) = O(log n)，则称其具有对数时间。由于计算机使用二进制的记数系统，对数常常以2为底（即log2 n，有时写作lg n）。然而，由对数的换底公式，loga n和logb n只有一个常数因子不同，这个因子在大O记法中被丢弃。因此记作O（log n），而不论对数的底是多少，是对数时间算法的标准记法。————维基</em></p>
 <p>##如何计算或者推导时间复杂度呢<br>我们来分析一下常规做法：</p>
 <ol>
@@ -181,8 +180,6 @@
 <li>根据基本操作执行情况计算出规模n的函数f(n),并确定时间复杂度为T(n)=O( <strong>f(n)中增长最快的项/此项的系数</strong> ).</li>
 </ol>
 <p>那么是什么意思呢?记住这个利器，这三句话即可。</p>
-<blockquote>
-</blockquote>
 <ol>
 <li>用常数1替换所有加法常数。</li>
 <li>在修改后的运行次数的函数中，只保留最高阶项。</li>
