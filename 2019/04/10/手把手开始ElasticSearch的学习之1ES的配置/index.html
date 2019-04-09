@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Codeagles&#39;s Blog">
 <meta property="og:description" content="ES6.7的配置解读(翻译) 内容是翻译+理解+Google整理出来的，如有问题，请指出，会修正。  Start   板块 属性 描述     集群 cluster.name: elasticsearch 集群名字，可以自行修改，ES会通过集群名字来区分同一网段下多个集群   节点 node.name: node-1 当前节点的节点名字，同一集群下名字不能相同    node.attr.rack:">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-09T13:53:15.567Z">
+<meta property="og:updated_time" content="2019-04-09T13:57:13.196Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手把手开始ElasticSearch的学习之1ES的配置">
 <meta name="twitter:description" content="ES6.7的配置解读(翻译) 内容是翻译+理解+Google整理出来的，如有问题，请指出，会修正。  Start   板块 属性 描述     集群 cluster.name: elasticsearch 集群名字，可以自行修改，ES会通过集群名字来区分同一网段下多个集群   节点 node.name: node-1 当前节点的节点名字，同一集群下名字不能相同    node.attr.rack:">
@@ -159,79 +159,79 @@
 <tr>
 <th>板块</th>
 <th style="text-align:center">属性</th>
-<th style="text-align:right">描述</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>集群</td>
 <td style="text-align:center">cluster.name: elasticsearch</td>
-<td style="text-align:right">集群名字，可以自行修改，ES会通过集群名字来区分同一网段下多个集群</td>
+<td style="text-align:left">集群名字，可以自行修改，ES会通过集群名字来区分同一网段下多个集群</td>
 </tr>
 <tr>
 <td>节点</td>
 <td style="text-align:center">node.name: node-1</td>
-<td style="text-align:right">当前节点的节点名字，同一集群下名字不能相同</td>
+<td style="text-align:left">当前节点的节点名字，同一集群下名字不能相同</td>
 </tr>
 <tr>
 <td></td>
 <td style="text-align:center">node.attr.rack: r1</td>
-<td style="text-align:right">比集群更大的概念</td>
+<td style="text-align:left">比集群更大的概念</td>
 </tr>
 <tr>
 <td></td>
 <td style="text-align:center">node.master: true</td>
-<td style="text-align:right">是否有资格被选举为主节点，该参数默认为true(此版本文件中无该属性)</td>
+<td style="text-align:left">是否有资格被选举为主节点，该参数默认为true(此版本文件中无该属性)</td>
 </tr>
 <tr>
 <td></td>
 <td style="text-align:center">node.data:true</td>
-<td style="text-align:right">该节点是否为数据节点存储数据，默认为true(此版本文件中无该属性)</td>
+<td style="text-align:left">该节点是否为数据节点存储数据，默认为true(此版本文件中无该属性)</td>
 </tr>
 <tr>
 <td>Path路径</td>
 <td style="text-align:center">path.data: /path/to/data</td>
-<td style="text-align:right">存储的数据文件路径，建议设置ES目录外的地方，防止删除时连带文件也被删除</td>
+<td style="text-align:left">存储的数据文件路径，建议设置ES目录外的地方，防止删除时连带文件也被删除</td>
 </tr>
 <tr>
 <td></td>
 <td style="text-align:center">path.logs: /path/to/logs</td>
-<td style="text-align:right">存储的日志文件路径，建议设置ES目录外的地方，防止删除时连带文件也被删除</td>
+<td style="text-align:left">存储的日志文件路径，建议设置ES目录外的地方，防止删除时连带文件也被删除</td>
 </tr>
 <tr>
 <td>内存</td>
 <td style="text-align:center">bootstrap.memory_lock: true</td>
-<td style="text-align:right">这个配置项对node的健康极其重要，JVM永远不swapped out to disk，即永远不使用交换分区将JVM交换到磁盘上。(此条搬运过来，没有亲自尝试过)</td>
+<td style="text-align:left">这个配置项对node的健康极其重要，JVM永远不swapped out to disk，即永远不使用交换分区将JVM交换到磁盘上。(此条搬运过来，没有亲自尝试过)</td>
 </tr>
 <tr>
 <td>网络</td>
 <td style="text-align:center">network.host: 0.0.0.0</td>
-<td style="text-align:right">默认时，elasticsearch只绑定loopback地址，为了外网访问设置为4个0</td>
+<td style="text-align:left">默认时，elasticsearch只绑定loopback地址，为了外网访问设置为4个0</td>
 </tr>
 <tr>
 <td></td>
 <td style="text-align:center">http.port: 9200</td>
-<td style="text-align:right">http请求端口 默认9200</td>
+<td style="text-align:left">http请求端口 默认9200</td>
 </tr>
 <tr>
 <td>集群发现配置</td>
 <td style="text-align:center">discovery.zen.ping.unicast.hosts: [“host1”, “host2”]</td>
-<td style="text-align:right">例如discovery.zen.ping.unicast.hosts:[“127.0.0.1:9300”,”127.0.0.1:9302”,”127.0.0.1:9304”]</td>
+<td style="text-align:left">例如discovery.zen.ping.unicast.hosts:[“127.0.0.1:9300”,”127.0.0.1:9302”,”127.0.0.1:9304”]</td>
 </tr>
 <tr>
 <td></td>
 <td style="text-align:center">discovery.zen.minimum_master_nodes:</td>
-<td style="text-align:right">为防止数据丢失，配置discovery.zen.minimum_master_nodes设置（默认设置1）至关重要， 以便每个符合主节点的节点都知道 为了形成群集而必须可见的主节点的最小数量，为了防止脑裂要设置多一些主节点节点，建议数量为候选节点/2+1，有三个符合条件的节点，则最小主节点应设置为(3 / 2) + 1或2。</td>
+<td style="text-align:left">为防止数据丢失，配置discovery.zen.minimum_master_nodes设置（默认设置1）至关重要， 以便每个符合主节点的节点都知道 为了形成群集而必须可见的主节点的最小数量，为了防止脑裂要设置多一些主节点节点，建议数量为候选节点/2+1，有三个符合条件的节点，则最小主节点应设置为(3 / 2) + 1或2。</td>
 </tr>
 <tr>
 <td>网关</td>
 <td style="text-align:center">gateway.recover_after_nodes: 3</td>
-<td style="text-align:right">设置集群中N个节点启动时进行数据恢复，默认为3。</td>
+<td style="text-align:left">设置集群中N个节点启动时进行数据恢复，默认为3。</td>
 </tr>
 <tr>
 <td>其他</td>
 <td style="text-align:center">action.destructive_requires_name: true</td>
-<td style="text-align:right">删除索引时需要显式名称</td>
+<td style="text-align:left">删除索引时需要显式名称</td>
 </tr>
 </tbody>
 </table>
