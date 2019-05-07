@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Archives: 2018/12 | Codeagles&#39;s Blog</title>
+  <title>Tag: 踩坑 | Codeagles&#39;s Blog</title>
   
   
 
@@ -186,9 +186,11 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      <div class="l_main">
-	
-		
+      
+<div class="l_main">
+  
+    
+      
   <section class="post-list">
     
       
@@ -214,8 +216,8 @@
       
         
   <h2 class="title">
-    <a href="/2018/12/25/数据结构之算法时间复杂度/">
-      数据结构之算法时间复杂度
+    <a href="/2019/05/06/Docker启动Java字体异常/">
+      Docker启动Java项目报异常:FontConfiguration.getVersion(FontConfiguration.java:1264)
     </a>
   </h2>
 
@@ -243,7 +245,7 @@
             <div class="new-meta-item date">
   <a class="notlink">
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2018-12-25</p>
+    <p>2019-05-06</p>
   </a>
 </div>
 
@@ -253,9 +255,9 @@
             
   
   <div class="new-meta-item category">
-    <a href="/categories/Tech/算法/" rel="nofollow">
+    <a href="/categories/Tech/那些年走过的坑/" rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>Tech&nbsp;/&nbsp;算法</p>
+      <p>Tech&nbsp;/&nbsp;那些年走过的坑</p>
     </a>
   </div>
 
@@ -282,34 +284,22 @@
 
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
-      <blockquote>
-<p>版权声明：本文为 Codeagles 原创文章，可以随意转载，但必须在明确位置注明出处！！！</p>
-</blockquote>
-<p>想要学会算法时间复杂度，那么就要先弄清楚几个概念。</p>
-<ol>
-<li>什么是算法时间复杂度？</li>
-<li>它有什么用呢？</li>
-<li>写法记作 T(n)=O(f(n))<ul>
-<li>T(n):语句执行的总次数关于n的函数</li>
-<li>n：问题规模</li>
-<li>f(n):问题规模n的某个函数</li>
-<li>用O()来体现算法时间复杂度的记法</li>
-</ul>
-</li>
-</ol>
-      
-        <div class="readmore">
-          <a href="/2018/12/25/数据结构之算法时间复杂度/" class="flat-box">
-            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
-            阅读全文
-          </a>
-        </div>
+      <h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>使用docker部署SpringBoot项目时，验证码代码恰好调用了JDK1.8底层的FontConfiguration这个类生成图片。<br>结果前端调用的时候抛了个异常。如下<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">java.lang.NullPointerException: </span>null</span><br><span class="line">        <span class="built_in">at</span> sun.awt.FontConfiguration.getVersion(FontConfiguration.<span class="keyword">java:1264)</span></span><br><span class="line"><span class="keyword"> </span>       <span class="built_in">at</span> sun.awt.FontConfiguration.readFontConfigFile(FontConfiguration.<span class="keyword">java:219)</span></span><br><span class="line"><span class="keyword"> </span>       <span class="built_in">at</span> sun.awt.FontConfiguration.init(FontConfiguration.<span class="keyword">java:107)</span></span><br><span class="line"><span class="keyword"> </span>       <span class="built_in">at</span> sun.awt.X<span class="number">11F</span>ontManager.createFontConfiguration(X<span class="number">11F</span>ontManager.<span class="keyword">java:774)</span></span><br><span class="line"><span class="keyword"> </span>       <span class="built_in">at</span> sun.font.SunFontManager$<span class="number">2</span>.run(SunFontManager.<span class="keyword">java:431)</span></span><br><span class="line"><span class="keyword"> </span>       <span class="built_in">at</span> <span class="keyword">java.security.AccessController.doPrivileged(Native </span>Method)</span><br><span class="line">        <span class="built_in">at</span> sun.font.SunFontManager.&lt;init&gt;(SunFontManager.<span class="keyword">java:376)</span></span><br><span class="line"><span class="keyword"> </span>       <span class="built_in">at</span> sun.awt.FcFontManager.&lt;init&gt;(FcFontManager.<span class="keyword">java:35)</span></span><br><span class="line"><span class="keyword"> </span>       <span class="built_in">at</span> sun.awt.X<span class="number">11F</span>ontManager.&lt;init&gt;(X<span class="number">11F</span>ontManager.<span class="keyword">java:57)</span></span><br><span class="line"><span class="keyword"> </span>       <span class="built_in">at</span> sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)</span><br><span class="line">        <span class="built_in">at</span> sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.<span class="keyword">java:62)</span></span><br><span class="line"><span class="keyword"> </span>       <span class="built_in">at</span> sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.<span class="keyword">java:45)</span></span><br><span class="line"><span class="keyword"> </span>       <span class="built_in">at</span> <span class="keyword">java.lang.reflect.Constructor.newInstance(Constructor.java:423)</span></span><br><span class="line"><span class="keyword"> </span>       <span class="built_in">at</span> <span class="keyword">java.lang.Class.newInstance(Class.java:442)</span></span><br><span class="line"><span class="keyword"> </span>       <span class="built_in">at</span> sun.font.FontManagerFactory$<span class="number">1</span>.run(FontManagerFactory.<span class="keyword">java:83)</span></span><br><span class="line"><span class="keyword"> </span>       <span class="built_in">at</span> <span class="keyword">java.security.AccessController.doPrivileged(Native </span>Method)</span><br><span class="line">        <span class="built_in">at</span> sun.font.FontManagerFactory.getInstance(FontManagerFactory.<span class="keyword">java:74)</span></span><br><span class="line"><span class="keyword"> </span>       ......</span><br><span class="line">        .....</span><br><span class="line">        <span class="comment"># 不继续贴了 太多了</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h4><p>比较有效的解决办法是装ttf-dejavu<br>修改前Dockerfile：<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> openjdk:<span class="number">8</span>-jdk-alpine</span><br><span class="line"><span class="keyword">VOLUME</span><span class="bash"> /tmp</span></span><br><span class="line"><span class="bash">ADD xx.jar app.jar</span></span><br><span class="line"><span class="bash">ENTRYPOINT [<span class="string">"java"</span>,<span class="string">"-Djava.security.egd=file:/dev/./urandom"</span>,<span class="string">"-jar"</span>,<span class="string">"/app.jar"</span>]</span></span><br></pre></td></tr></table></figure></p>
+<p>追加一句话重新打包、编译、部署即可。<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">RUN</span> apk <span class="builtin-name">add</span> --update font-adobe-100dpi ttf-dejavu fontconfig</span><br></pre></td></tr></table></figure></p>
+<p>修改后Dockerfile：<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> openjdk:<span class="number">8</span>-jdk-alpine</span><br><span class="line"><span class="keyword">VOLUME</span><span class="bash"> /tmp</span></span><br><span class="line"><span class="bash">ADD xx.jar app.jar</span></span><br><span class="line"><span class="bash">RUN apk add --update font-adobe-100dpi ttf-dejavu fontconfig</span></span><br><span class="line"><span class="bash">ENTRYPOINT [<span class="string">"java"</span>,<span class="string">"-Djava.security.egd=file:/dev/./urandom"</span>,<span class="string">"-jar"</span>,<span class="string">"/app.jar"</span>]</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>由于验证码需要的特殊字体在系统里是不存在的，不过sun的JDK是可以调用的，而openJDK不行，所以要么换JDK、要么安装字体库。</p>
+
       
     </div>
     
       <div class="full-width auto-padding tags">
         
-          <a href="/tags/时间复杂度/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>时间复杂度</a>
+          <a href="/tags/docker/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>docker</a>
+        
+          <a href="/tags/win/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>win</a>
+        
+          <a href="/tags/踩坑/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>踩坑</a>
         
       </div>
     
@@ -438,7 +428,8 @@
   
 
 
-	
+    
+  
 </div>
 <aside class="l_side">
   
@@ -688,14 +679,6 @@
   </div>
 </footer>
 <script>setLoadingBarProgress(80);</script>
-
-
-
-
-	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-	
-
-	
 
 
       <script>setLoadingBarProgress(60);</script>
